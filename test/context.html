@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Angular test with puppeteer</title>
+  <title>Angular test with Puppeteer</title>
   <link href="favicon.ico" rel="icon" type="image/x-icon" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -24,14 +24,16 @@ __puppeteer__ = true;
   <script type="text/javascript" src="/_karma_webpack_/scripts.bundle.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/_karma_webpack_/vendor.bundle.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="/_karma_webpack_/main.bundle.js" crossorigin="anonymous"></script>
- <script>
- jasmine.getEnv().addReporter({
-   jasmineDone: function() {
-     if (typeof puppeteerDone === 'function') {
-       puppeteerDone();
-     }
-   }
- });
- </script>
+  <script>
+let code = 0;
+jasmine.getEnv().addReporter({
+  specDone: function(result) {
+    if (result.stus !== 'passed') code = 1;
+  },
+  jasmineDone: function() {
+    if (typeof puppeteerDone === 'function') puppeteerDone(code);
+  }
+});
+  </script>
 </body>
 </html>
