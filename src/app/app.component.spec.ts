@@ -1,6 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { capturePage } from '../test-util';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -29,4 +30,8 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
   }));
+
+  afterEach(function(this: { fullName: string }, done: Function) {
+    setTimeout(() => capturePage(this.fullName.replace(/\s+/g, '_')).then(() => done()), 100);
+  });
 });

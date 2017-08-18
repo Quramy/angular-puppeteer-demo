@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Angular test with puppeteer</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="../node_modules/jasmine-core/lib/jasmine-core/jasmine.css" />
+</head>
+
+<body>
+<script>
+__karma__ = {
+  start: () => { }
+};
+__puppeteer__ = true;
+</script>
+  <script type="text/javascript" src="/_karma_webpack_/inline.bundle.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/_karma_webpack_/polyfills.bundle.js" crossorigin="anonymous"></script>
+  <script src="/node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+  <script src="/node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+  <script src="/node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+  <script type="text/javascript" src="/_karma_webpack_/scripts.bundle.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/_karma_webpack_/vendor.bundle.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/_karma_webpack_/main.bundle.js" crossorigin="anonymous"></script>
+ <script>
+ jasmine.getEnv().addReporter({
+   jasmineDone: function() {
+     if (typeof puppeteerDone === 'function') {
+       puppeteerDone();
+     }
+   }
+ });
+ </script>
+</body>
+</html>
