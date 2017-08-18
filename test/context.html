@@ -28,7 +28,7 @@ __puppeteer__ = true;
 let code = 0;
 jasmine.getEnv().addReporter({
   specDone: function(result) {
-    if (result.stus !== 'passed') code = 1;
+    if (result.status !== 'passed') conde = 1;
   },
   jasmineDone: function() {
     if (typeof puppeteerDone === 'function') puppeteerDone(code);
