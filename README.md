@@ -1,6 +1,7 @@
 # Angular Puppeteer Demo
+[![CircleCI](https://circleci.com/gh/Quramy/angular-puppeteer-demo.svg?style=svg)](https://circleci.com/gh/Quramy/angular-puppeteer-demo)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+:sunglasses: A demonstration repository explains how to replace from Karma to Puppeteer.
 
 ## Running unit tests
 
