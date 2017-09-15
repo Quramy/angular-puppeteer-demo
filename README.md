@@ -4,7 +4,7 @@
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via ~~[Karma](https://karma-runner.github.io)~~ **[Puppeteer](https://github.com/GoogleChrome/puppeteer)**.
+Run `npm test` to execute the unit tests via ~~[Karma](https://karma-runner.github.io)~~ **[Puppeteer](https://github.com/GoogleChrome/puppeteer)**.
 And captures screenshot viewport after each spec. [The captured images are here](https://s3.amazonaws.com/reg-publish-bucket-dc9621d1-4693-41e6-8e94-51eaeea162fb/06039132dbfe644740481e18dbc8e53019e91ace/index.html)(by [reg-suit](https://github.com/reg-viz/reg-suit)).
 
 ## How to replace test runner
